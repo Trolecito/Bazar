@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".LoginActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="277dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="65dp"
+        android:textColorHint="@color/white"
+        app:counterEnabled="true"
+        app:counterMaxLength="12"
+        app:counterTextColor="@color/white"
+        app:helperTextTextColor="@color/white"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre de usuario, correo o celular"
+            android:maxLength="12"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="279dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="66dp"
+        android:textColorHint="@color/white"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/white"
+        app:counterEnabled="true"
+        app:counterMaxLength="12"
+        app:counterTextColor="@color/white"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Contraseña"
+            android:maxLength="12"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textCursorDrawable="@color/white"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="238dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="87dp"
+        android:backgroundTint="#6615F0"
+        android:text="Iniciar Sesión"
+        app:cornerRadius="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="162dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="125dp"
+        android:gravity="center"
+        android:text="¿Olvidaste la contraseña?"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button2"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="139dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="83dp"
+        android:text="Crear Cuenta"
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="245dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginBottom="46dp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logozb" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
