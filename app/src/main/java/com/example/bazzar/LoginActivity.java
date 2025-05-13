@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.os.Build;
+import android.view.Window;
+import androidx.core.content.ContextCompat;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,6 +21,10 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.setStatusBarColor(ContextCompat.getColor(this, android.R.color.black));
+        }
         setContentView(R.layout.activity_login);
 
         username = findViewById(R.id.txt_user);
