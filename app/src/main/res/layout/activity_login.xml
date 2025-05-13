@@ -26,6 +26,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nombre de usuario, correo o celular"
@@ -54,19 +55,19 @@
 
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
             android:hint="Contraseña"
+            android:inputType="textPassword"
             android:maxLength="12"
             android:textColor="@color/white"
-            android:textSize="14dp"
             android:textCursorDrawable="@color/white"
-            />
+            android:textSize="14dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_login"
         android:layout_width="238dp"
         android:layout_height="50dp"
         android:layout_marginStart="86dp"
@@ -91,10 +92,10 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_registrarse"
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="139dp"
         android:layout_height="50dp"
