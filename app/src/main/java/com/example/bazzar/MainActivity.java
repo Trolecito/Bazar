@@ -11,17 +11,13 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
-
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -59,19 +55,16 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setBackground(null);
         bottomNavigationView.setOnItemSelectedListener(item -> {
 
-            switch (item.getItemId()) {
-                case R.id.inicio  :
-                    replaceFragment(new HomeFragment());
-                    break;
-                case 2131230893:
-                    replaceFragment(new UserFragment());
-                    break;
-                case 2131230892:
-                    replaceFragment(new CartFragment());
-                    break;
-                case 2131230891:
-                    replaceFragment(new MenuFragment());
-                    break;
+            int id = item.getItemId();
+
+            if (id == R.id.inicio) {
+                replaceFragment(new HomeFragment());
+            } else if (id == R.id.cuenta) {
+                replaceFragment(new UserFragment());
+            } else if (id == R.id.carrito) {
+                replaceFragment(new CartFragment());
+            } else if (id == R.id.menu) {
+                replaceFragment(new MenuFragment());
             }
 
             return true;
@@ -83,10 +76,8 @@ public class MainActivity extends AppCompatActivity {
                 showBottomDialog();
             }
         });
-
     }
 
-    //onCreate
     private  void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -94,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-    private void showBottomDialog() {
+     private void showBottomDialog() {
 
         final Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -149,4 +140,5 @@ public class MainActivity extends AppCompatActivity {
         dialog.getWindow().setGravity(Gravity.BOTTOM);
 
     }
+
 }
